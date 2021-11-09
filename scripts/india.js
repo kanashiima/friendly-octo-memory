@@ -14,9 +14,9 @@ $(function () {
 
     console.log(spaceCount);
     if (spaceCount === 0) {
-      $(this).next().text("all good");
+      $(this).next().text("All good!");
     } else if (spaceCount > 0) {
-      $(this).next().text("no spaces allowed in email!");
+      $(this).next().text("No spaces allowed in email!");
     }
   });
 
@@ -24,25 +24,25 @@ $(function () {
   $("#noAlpha").keyup(function (e) {
     e.preventDefault();
     this.value = this.value.replace(/[^0-9\.]/g, "");
-    $(this).next().text("remember, no alpha!");
+    $(this).next().text("Only Numbers Please");
   });
 
   $("#noAlpha2").keyup(function (e) {
     e.preventDefault();
     this.value = this.value.replace(/[^0-9\.]/g, "");
-    $(this).next().text("remember, no alpha!");
+    $(this).next().text("Only Numbers Please");
   });
 
   $("#noAlpha3").keyup(function (e) {
     e.preventDefault();
     this.value = this.value.replace(/[^0-9\.]/g, "");
-    $(this).next().text("remember, no alpha!");
+    $(this).next().text("Only Numbers Please!");
   });
 
   $("#noAlpha4").keyup(function (e) {
     e.preventDefault();
     this.value = this.value.replace(/[^0-9\.]/g, "");
-    $(this).next().text("remember, no alpha!");
+    $(this).next().text("Only Numbers Please");
   });
  
 
@@ -51,10 +51,10 @@ $(function () {
 
     if (alphaRegex.test(inputVal)) {
       $(this).removeClass("error").addClass("success");
-      $(this).next().text("super cool!");
+      $(this).next().text("All good!");
     } else {
       $(this).removeClass("success").addClass("error");
-      $(this).next().text("ah, farts!");
+      $(this).next().text("Only Letters! No Numbers!");
     }
   });
 
@@ -65,10 +65,10 @@ $(function () {
     // test input value against regular expression
     if (alphaRegex.test(inputVal)) {
       $(this).removeClass("error").addClass("success");
-      $(this).next().text("super cool!");
+      $(this).next().text("All good!");
     } else {
       $(this).removeClass("success").addClass("error");
-      $(this).next().text("ah, farts!");
+      $(this).next().text("Only Letters! No Numbers!");
     }
   });
 
